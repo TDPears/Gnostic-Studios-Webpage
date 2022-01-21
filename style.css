@@ -24,7 +24,9 @@
     align-items: center;
     font-size: 1.3rem;
     top: 0;
-    position: sticky;
+    left: 0;
+    right: 0;
+    position: fixed;
     z-index: 100;
 }
 
@@ -39,8 +41,7 @@
 }
 
 .header__logo {
-    height: 60px;
-    width: 250px;
+    height: 100%;
     align-items: center;
     display:inline-block;
     -webkit-mask:url(Images/gnostic-studios-text-transparent.png) center/contain no-repeat;
@@ -66,12 +67,17 @@
     align-items: center;
     list-style: none;
     height: 60px;
-    width: 450px;
+    width: 300px;
     justify-content: space-between;
 }
 
-.navbar__item {
-    height: 60px;
+.navbar__menu a {
+    height: 34px;
+}
+
+.nav__btn {
+    height: 100%;
+    width: 80px;
 }
 
 .navbar__links {
@@ -89,41 +95,20 @@
     transition:  all 0.3s ease;
 }
 
-@media screen and (max-width: 840px) {
-    .navbar__container {
-        display: flex;
-        justify-content: space-between;
-        height:  60px;
-        z-index: 1;
-        width: 100%;
-    }
+.button__link {
+    color: black;
+}
 
+@media screen and (max-width: 700px) {
     .navbar__menu {
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position:  absolute;
-        top: -1000px;
-        opacity: 1;
-        z-index: -1;
-        transition:  all 0.5 ease;
-    }    
-
-    .navbar__menu.active {
-        background: #131313;
-        top: 100%;
-        opacity: 1;
-        transition: all 0.5 ease;
-        z-index: 99;
-        height: 60vh;
-        font-size: 1.6rem;
-    }  
+        display: none;
+    }
 }
 
 /* Slideshow section */
 #slideshow {
     display: flex;
+    top: 60px;
     justify-content: center;
     background-color: #131313;
     animation: 7s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite;
@@ -131,7 +116,8 @@
 
 #slideshow__container {
     width: 960px;
-    margin-top: 20px;
+    margin-top: 60px;
+    padding-top: 2%;
     overflow: hidden;
     border-radius: 4px;
     filter: drop-shadow(0px 0px 12px black);
@@ -191,6 +177,14 @@
 
 .card__container a {
     text-decoration: none;
+    filter: drop-shadow(0px 0px 12px black);
+    transition: .6s ease;
+}
+
+.card__container a:hover {
+    transform: scale(115%);
+    z-index: 2;
+    filter: drop-shadow(0px 0px 12px var(--main-green));
 }
 
 .card__container h1 {
@@ -198,7 +192,7 @@
     text-align: center;
     text-shadow: 1px 1px 1px black;
     width: 300px;
-    margin: 25px 0;
+    margin: 100px 0px 25px;
 }
 
 .card__group {
@@ -221,12 +215,6 @@
     width: 300px;
     background: white;
     border-radius: 4px;
-    filter: drop-shadow(0px 0px 12px black);
-    transition: 1s ease;
-}
-
-.card:hover {
-    filter: drop-shadow(0px 0px 10px var(--main-green));
 }
 
 .card__images {
