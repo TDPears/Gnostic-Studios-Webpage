@@ -77,12 +77,12 @@ body {
     display: flex;
     align-items: center;
     list-style: none;
-    height: 60px;
+    height: auto;
     width: 300px;
     justify-content: space-between;
 }
 
-.navbar__menu li a, .nav__btn {
+.navbar__menu li, .nav__btn {
     height: 34px;
 }
 
@@ -211,21 +211,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 30px 15px;
-    width: 100%;
+    padding: 2% 1.5%;
+    width: 70%;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-image: linear-gradient( to right, rgba(0, 0, 0, 0.878),rgba(0, 0, 0, 0));
 }
 
 .slideshow__info .title {
     font-size: 45pt;
     padding-bottom: 5px;
     color: var(--light-main-green);
+    
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    transition: all .3s ease ;
 }
 
 .slideshow__info .description {
     font-size: 12pt;
     color: white;
+    transition: all .3s ease ;
 }
 
 @keyframes slider {
@@ -277,7 +281,7 @@ body {
 .card__container h1 {
     color: var(--light-main-green);
     text-align: center;
-    font-size: 30pt;
+    font-size: 24pt;
     padding: 105px 15px 15px 15px;
     transition: padding .3s ease;
 }
@@ -311,14 +315,15 @@ body {
 .card h2 {
     text-align: center;
     color: black;
-    margin-top: 8px;
+    padding-top: 8px;
 }
 
 .card p {
     height: 60px;
     text-align: center;
-    padding: 12px 5px;
-    font-weight: 300;
+    padding: 15px;
+    font-size: 11pt;
+    font-weight: 400;
     color: black;
 }
 
@@ -353,18 +358,24 @@ body {
     color: white;
     margin: 10px 10px 0;
 } 
+.top__wrapper h1 {
+    font-size: 18px;
+    margin: 5px 0;
+}
 
 .top__wrapper p {
+    font-size: 14px;
     margin: 5px 0;
 }
 
 .social__icons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: auto;
-    padding: 5px 10%;
-    width: 100%;
+    align-self: center;
+    justify-content: space-around;
+    height: 28px;
+    padding: 5px auto;
+    width: 200px;
 }
 
 .social__icons a {
@@ -378,17 +389,7 @@ body {
 }
 
 @media screen and (max-width: 505px) {
-    #slideshow {
-        padding:120px 15px 0px;
-    }
     
-    .slideshow__info .title {
-        font-size: 30pt;
-    }
-
-    .slideshow__info .description {
-        font-size: 10pt;
-    }
 }
 
 @media screen and (max-width: 671px) {
@@ -397,6 +398,9 @@ body {
     }
 }
 @media screen and (max-width: 800px) {
+
+    /* Navbar Menu */
+
     .navbar__container {
         justify-content: space-between;
     }
@@ -464,5 +468,19 @@ body {
 
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Slideshow */
+
+    #slideshow {
+        padding:120px 15px 0px;
+    }
+    
+    .slideshow__info .title {
+        font-size: 24pt;
+    }
+
+    .slideshow__info .description {
+        font-size: 10pt;
     }
 }
