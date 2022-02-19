@@ -151,7 +151,7 @@ body {
 /* Slideshow section */
 #slideshow {
     display: flex;
-    padding: 120px 15px 45px;
+    padding: 160px 15px 45px;
     justify-content: center;
     transition: padding .3s ease;
     animation: 7s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite;
@@ -315,6 +315,10 @@ a.anchor {
     border-radius: 4px;
 }
 
+.card:active {
+    background-color: red;
+}
+
 .card__images {
     border-bottom: 2px solid black;
 }
@@ -352,7 +356,7 @@ a.anchor {
 
 .top__container {
     display: flex;
-    width: 400px;
+    width: 360px;
 }
 
 .top__wrapper {
@@ -375,6 +379,10 @@ a.anchor {
     margin: 5px 0;
 }
 
+.top__wrapper a {
+    color: var(--main-green);
+}
+
 .social__icons {
     display: flex;
     align-items: center;
@@ -385,9 +393,7 @@ a.anchor {
     width: 200px;
 }
 
-.social__icons a {
-    color: var(--main-green);
-}
+/* Media Screens */
 
 @media screen and (max-width: 350px ) {
     .header__logo, .header__logo::before {
